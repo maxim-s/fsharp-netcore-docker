@@ -35,4 +35,6 @@ RUN mkdir warmup && \
     dotnet new && \
     cd - && \
     rm -rf warmup /tmp/NuGetScratch
+RUN dotnet tool install fake-cli -g
+ENV PATH="${PATH}:/root/.dotnet/tools"
 WORKDIR /root
